@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
     private Ray ray;
     public TextMeshProUGUI SceneDia;
+    public GameObject Mime;
     public Camera myCamera;
     public GameObject Player;
     public GameObject SitCam;
+    public TextMeshProUGUI MimeDia;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,7 @@ public class PlayerInteraction : MonoBehaviour
                 
                 CommunicateWithCry(raycastHit);
                 SitOnChair(raycastHit);
+                InteractFailedPeople(raycastHit);
             }
         }
 
@@ -50,9 +55,31 @@ public class PlayerInteraction : MonoBehaviour
             SitCam.SetActive(true);
         }
     }
+    private void InteractFailedPeople(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.CompareTag("FailPeople"))
+        {
+            Mime.SetActive(true);
+            StartCoroutine(MimeGenerator());
+            Player.GetComponent<FirstPersonMovement>().enabled = false;
+            Player.GetComponent<Jump>().enabled = false;
+        }
+    }
     IEnumerator ClearDia(float a)
     {
         yield return new WaitForSeconds(a);
         SceneDia.text = "";
+    }
+    IEnumerator MimeGenerator()
+    {
+        MimeDia.text = "1";
+        yield return new WaitForSeconds(2f);
+        MimeDia.text = "2";
+        yield return new WaitForSeconds(2f);
+        MimeDia.text = "3";
+        yield return new WaitForSeconds(2f);
+        MimeDia.text = "4";
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(1);
     }
 }

@@ -38,5 +38,8 @@ public class CameraToClock : MonoBehaviour
     {
         SitcamObj.SetActive(false);
         Player.SetActive(true);
+        //Player.GetComponent<FirstPersonMovement>().enabled = false;
+        //Player.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        //Player.GetComponent<FirstPersonMovement>().enabled = true;
     }
 }
