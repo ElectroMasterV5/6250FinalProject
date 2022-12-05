@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
     private Ray ray;
     public TextMeshProUGUI SceneDia;
     public Camera myCamera;
+    public GameObject Player;
+    public GameObject SitCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 
                 CommunicateWithCry(raycastHit);
+                SitOnChair(raycastHit);
             }
         }
 
@@ -36,6 +39,15 @@ public class PlayerInteraction : MonoBehaviour
             
             SceneDia.text = "1111111111";
             StartCoroutine(ClearDia(5f));
+        }
+    }
+    private void SitOnChair(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.CompareTag("Chair"))
+        {
+
+            Player.SetActive(false);
+            SitCam.SetActive(true);
         }
     }
     IEnumerator ClearDia(float a)
