@@ -11,8 +11,6 @@ public class PlayerInteract2 : MonoBehaviour
     public TextMeshProUGUI SceneDia;
     public GameObject Mime;
     public Camera myCamera;
-    public GameObject Player;
-    public GameObject SitCam;
     public TextMeshProUGUI MimeDia;
     // Start is called before the first frame update
     void Start()

@@ -36,6 +36,8 @@ public class PlayerInteraction : MonoBehaviour
                 InteractFailedPeople(raycastHit);
                 CommunicateWithFatherInLaw(raycastHit);
                 CommunicateWithMotherInLaw(raycastHit);
+                CommunicateWithP(raycastHit);
+                CommunicateChild(raycastHit);
             }
         }
 
@@ -65,6 +67,44 @@ public class PlayerInteraction : MonoBehaviour
         {
 
             SceneDia.text = "33333333333";
+            StartCoroutine(ClearDia(3f));
+        }
+    }
+    private void CommunicateChild(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.CompareTag("Child"))
+        {
+            Mime.SetActive(true);
+            CurrentScene = 2;
+            StartCoroutine(MimeGenerator());
+            Player.GetComponent<FirstPersonMovement>().enabled = false;
+            Player.GetComponent<Jump>().enabled = false;
+        }
+    }
+    private void CommunicateWithP(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.CompareTag("P1"))
+        {
+
+            SceneDia.text = "P1";
+            StartCoroutine(ClearDia(3f));
+        }
+        else if (raycastHit.transform.CompareTag("P2"))
+        {
+
+            SceneDia.text = "P2";
+            StartCoroutine(ClearDia(3f));
+        }
+        else if (raycastHit.transform.CompareTag("P3"))
+        {
+
+            SceneDia.text = "P3";
+            StartCoroutine(ClearDia(3f));
+        }
+        else if (raycastHit.transform.CompareTag("P4"))
+        {
+
+            SceneDia.text = "P4";
             StartCoroutine(ClearDia(3f));
         }
     }
@@ -146,6 +186,5 @@ public class PlayerInteraction : MonoBehaviour
         CurrentScene = a;
         StartCoroutine(MimeGenerator());
         Player.GetComponent<FirstPersonMovement>().enabled = false;
-        Player.GetComponent<Jump>().enabled = false;
     }
 }
