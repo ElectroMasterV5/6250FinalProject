@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cry
+  - Chair
+  - FailPeople
+  - Body
+  - Beards
+  - Hair
+  - Head
+  - Glasses
+  - P_Father
+  - P_Mother
   layers:
   - Default
   - TransparentFX
