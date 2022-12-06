@@ -8,7 +8,7 @@ public class CameraLookLimited : MonoBehaviour
 
         public int speed = 5;
 
-        public Vector3 vect;
+        private Vector3 vect;
 
         private float xcream;
 
