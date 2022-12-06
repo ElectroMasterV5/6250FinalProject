@@ -14,6 +14,8 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject Player;
     public GameObject SitCam;
     public TextMeshProUGUI MimeDia;
+
+    private int CurrentScene=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,8 @@ public class PlayerInteraction : MonoBehaviour
                 CommunicateWithCry(raycastHit);
                 SitOnChair(raycastHit);
                 InteractFailedPeople(raycastHit);
+                CommunicateWithFatherInLaw(raycastHit);
+                CommunicateWithMotherInLaw(raycastHit);
             }
         }
 
@@ -43,7 +47,25 @@ public class PlayerInteraction : MonoBehaviour
         {
             
             SceneDia.text = "1111111111";
-            StartCoroutine(ClearDia(5f));
+            StartCoroutine(ClearDia(3f));
+        }
+    }
+    private void CommunicateWithFatherInLaw(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.CompareTag("P_Father"))
+        {
+
+            SceneDia.text = "22222222222";
+            StartCoroutine(ClearDia(3f));
+        }
+    }
+    private void CommunicateWithMotherInLaw(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.CompareTag("P_Mother"))
+        {
+
+            SceneDia.text = "33333333333";
+            StartCoroutine(ClearDia(3f));
         }
     }
     private void SitOnChair(RaycastHit raycastHit)
@@ -60,6 +82,7 @@ public class PlayerInteraction : MonoBehaviour
         if (raycastHit.transform.CompareTag("FailPeople"))
         {
             Mime.SetActive(true);
+            CurrentScene = 0;
             StartCoroutine(MimeGenerator());
             Player.GetComponent<FirstPersonMovement>().enabled = false;
             Player.GetComponent<Jump>().enabled = false;
@@ -72,14 +95,57 @@ public class PlayerInteraction : MonoBehaviour
     }
     IEnumerator MimeGenerator()
     {
-        MimeDia.text = "1";
-        yield return new WaitForSeconds(2f);
-        MimeDia.text = "2";
-        yield return new WaitForSeconds(2f);
-        MimeDia.text = "3";
-        yield return new WaitForSeconds(2f);
-        MimeDia.text = "4";
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(1);
+        switch (CurrentScene)
+        {
+            case 0:
+                MimeDia.text = "1";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "2";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "3";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "4";
+                yield return new WaitForSeconds(2f);
+                CurrentScene++;
+                SceneManager.LoadScene(CurrentScene);
+               
+                break;
+            case 1:
+                MimeDia.text = "5";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "6";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "7";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "8";
+                yield return new WaitForSeconds(2f);
+                CurrentScene++;
+                SceneManager.LoadScene(CurrentScene);
+                break;
+            case 2:
+                MimeDia.text = "9";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "10";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "11";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "12";
+                yield return new WaitForSeconds(2f);
+                MimeDia.text = "Thank you for playing!";
+                yield return new WaitForSeconds(2f);
+                Application.Quit();
+                CurrentScene++;
+                break;
+        }
+        
+    }
+    public void StartMime(int a)
+    {
+        Player.SetActive(true);
+        Mime.SetActive(true);
+        CurrentScene = a;
+        StartCoroutine(MimeGenerator());
+        Player.GetComponent<FirstPersonMovement>().enabled = false;
+        Player.GetComponent<Jump>().enabled = false;
     }
 }
