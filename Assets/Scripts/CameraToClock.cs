@@ -12,6 +12,7 @@ public class CameraToClock : MonoBehaviour
     public GameObject SitcamObj;
     public GameObject Operation1, Operation2;
     public AudioSource clock;
+    public AudioSource dead;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class CameraToClock : MonoBehaviour
         yield return new WaitForSecondsRealtime(a);
         clock.Pause();
         MyClock.GetComponent<Clock>().ChangeClockSpeed(1f);
+        dead.Play();
         yield return new WaitForSecondsRealtime(5f);
         SitcamAnim.SetTrigger("Stand");
         Operation1.SetActive(false);
