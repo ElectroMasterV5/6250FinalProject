@@ -27,10 +27,10 @@ public class CameraToClock : MonoBehaviour
     public void CToC()
     {
         clock.Play();
-        MyClock.GetComponent<Clock>().ChangeClockSpeed(500f);
+        MyClock.GetComponent<Clock>().ChangeClockSpeed(300f);
         CryMan.SetActive(false);
         FailedPeople.SetActive(true);
-        StartCoroutine(NormalSpeed(15f));
+        StartCoroutine(NormalSpeed(25f));
     }
     IEnumerator NormalSpeed(float a)
     {
