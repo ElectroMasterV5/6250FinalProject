@@ -14674,8 +14674,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5987\u4EA7\u79D1\nGynecology Dept."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 146dfee260a25f14d983da36df2aef01, type: 2}
-  m_sharedMaterial: {fileID: -2593124042274149570, guid: 146dfee260a25f14d983da36df2aef01, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4532b202ae0bdf94e912885b38dc737a, type: 2}
+  m_sharedMaterial: {fileID: -2593124042274149570, guid: 4532b202ae0bdf94e912885b38dc737a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14764,7 +14764,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2593124042274149570, guid: 146dfee260a25f14d983da36df2aef01, type: 2}
+  - {fileID: -2593124042274149570, guid: 4532b202ae0bdf94e912885b38dc737a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
