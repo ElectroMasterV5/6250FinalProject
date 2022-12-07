@@ -12,6 +12,7 @@ public class CameraToClock2 : MonoBehaviour
     public GameObject Timeline;
     public GameObject ParentsB;
     public GameObject ParentsA;
+    public AudioSource clock;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class CameraToClock2 : MonoBehaviour
     }
     public void CToC()
     {
+        clock.Play();
         MyClock.GetComponent<Clock>().ChangeClockSpeed(500f);
         ParentsB.SetActive(false);
         ParentsA.SetActive(true);
@@ -33,6 +35,7 @@ public class CameraToClock2 : MonoBehaviour
     IEnumerator NormalSpeed(float a)
     {
         yield return new WaitForSecondsRealtime(a);
+        clock.Pause();
         MyClock.GetComponent<Clock>().ChangeClockSpeed(1f);
         yield return new WaitForSecondsRealtime(15f);
         //SitcamAnim.SetTrigger("Stand");
