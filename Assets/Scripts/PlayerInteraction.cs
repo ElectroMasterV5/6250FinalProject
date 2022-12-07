@@ -57,7 +57,7 @@ public class PlayerInteraction : MonoBehaviour
         if (raycastHit.transform.CompareTag("P_Father"))
         {
 
-            SceneDia.text = "22222222222";
+            SceneDia.text = "She came in half an hour ago. Take a seat.";
             StartCoroutine(ClearDia(3f));
         }
     }
@@ -66,7 +66,7 @@ public class PlayerInteraction : MonoBehaviour
         if (raycastHit.transform.CompareTag("P_Mother"))
         {
 
-            SceneDia.text = "33333333333";
+            SceneDia.text = "Oh..My girl.";
             StartCoroutine(ClearDia(3f));
         }
     }
