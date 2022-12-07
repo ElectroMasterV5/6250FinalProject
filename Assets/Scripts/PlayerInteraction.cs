@@ -138,14 +138,14 @@ public class PlayerInteraction : MonoBehaviour
         switch (CurrentScene)
         {
             case 0:
-                MimeDia.text = "1";
+                MimeDia.text = "Mr. Benboerba…";
                 yield return new WaitForSeconds(2f);
-                MimeDia.text = "2";
+                MimeDia.text = "We tried our best...";
                 yield return new WaitForSeconds(2f);
-                MimeDia.text = "3";
+                MimeDia.text = "Your wife didn’t make it…";
                 yield return new WaitForSeconds(2f);
-                MimeDia.text = "4";
-                yield return new WaitForSeconds(2f);
+                //MimeDia.text = "4";
+                //yield return new WaitForSeconds(2f);
                 CurrentScene++;
                 SceneManager.LoadScene(CurrentScene);
                
