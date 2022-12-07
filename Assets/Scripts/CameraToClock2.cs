@@ -42,14 +42,15 @@ public class CameraToClock2 : MonoBehaviour
         //SitcamAnim.SetTrigger("Stand");
         SitcamObj2.SetActive(true);
         SitcamObj.SetActive(false);
+        Operation1.SetActive(false);
+        Operation2.SetActive(true);
         Timeline.SetActive(true);
     }
     public void FreeLook()
     {
         SitcamObj.SetActive(false);
         Player.SetActive(true);
-        Operation1.SetActive(false);
-        Operation2.SetActive(true);
+       
         //Player.GetComponent<FirstPersonMovement>().enabled = false;
         //Player.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         //Player.GetComponent<FirstPersonMovement>().enabled = true;

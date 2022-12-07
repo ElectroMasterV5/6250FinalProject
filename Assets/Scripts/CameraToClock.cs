@@ -38,13 +38,14 @@ public class CameraToClock : MonoBehaviour
         MyClock.GetComponent<Clock>().ChangeClockSpeed(1f);
         yield return new WaitForSecondsRealtime(5f);
         SitcamAnim.SetTrigger("Stand");
+        Operation1.SetActive(false);
+        Operation2.SetActive(true);
     }
     public void FreeLook()
     {
         SitcamObj.SetActive(false);
         Player.SetActive(true);
-        Operation1.SetActive(false);
-        Operation2.SetActive(true);
+  
         //Player.GetComponent<FirstPersonMovement>().enabled = false;
         //Player.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         //Player.GetComponent<FirstPersonMovement>().enabled = true;
