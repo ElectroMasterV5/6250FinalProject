@@ -12,6 +12,7 @@ public class CameraToClock2 : MonoBehaviour
     public GameObject Timeline;
     public GameObject ParentsB;
     public GameObject ParentsA;
+    public GameObject Operation1, Operation2;
     public AudioSource clock;
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,8 @@ public class CameraToClock2 : MonoBehaviour
     {
         SitcamObj.SetActive(false);
         Player.SetActive(true);
+        Operation1.SetActive(false);
+        Operation2.SetActive(true);
         //Player.GetComponent<FirstPersonMovement>().enabled = false;
         //Player.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         //Player.GetComponent<FirstPersonMovement>().enabled = true;
