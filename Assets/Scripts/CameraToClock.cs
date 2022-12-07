@@ -11,6 +11,7 @@ public class CameraToClock : MonoBehaviour
     public GameObject Player;
     public GameObject SitcamObj;
     public GameObject Operation1, Operation2;
+    public AudioSource clock;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class CameraToClock : MonoBehaviour
     }
     public void CToC()
     {
+        clock.Play();
         MyClock.GetComponent<Clock>().ChangeClockSpeed(500f);
         CryMan.SetActive(false);
         FailedPeople.SetActive(true);
@@ -32,6 +34,7 @@ public class CameraToClock : MonoBehaviour
     IEnumerator NormalSpeed(float a)
     {
         yield return new WaitForSecondsRealtime(a);
+        clock.Pause();
         MyClock.GetComponent<Clock>().ChangeClockSpeed(1f);
         yield return new WaitForSecondsRealtime(5f);
         SitcamAnim.SetTrigger("Stand");
