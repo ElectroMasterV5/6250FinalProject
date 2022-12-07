@@ -28,10 +28,10 @@ public class CameraToClock2 : MonoBehaviour
     public void CToC()
     {
         clock.Play();
-        MyClock.GetComponent<Clock>().ChangeClockSpeed(500f);
+        MyClock.GetComponent<Clock>().ChangeClockSpeed(300f);
         ParentsB.SetActive(false);
         ParentsA.SetActive(true);
-        StartCoroutine(NormalSpeed(15f));
+        StartCoroutine(NormalSpeed(25f));
     }
     IEnumerator NormalSpeed(float a)
     {
