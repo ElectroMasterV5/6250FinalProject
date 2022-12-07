@@ -4,128 +4,34 @@ using UnityEngine;
 
 public class CameraLookLimited : MonoBehaviour
 {
-   
 
-        public int speed = 5;
 
-        private Vector3 vect;
+    public float mouseSensitivity = 100.0f;
+    public float clampAngle = 80.0f;
 
-        private float xcream;
+    private float rotY = 0.0f; // rotation around the up/y axis
+    private float rotX = 0.0f; // rotation around the right/x axis
 
-        private float ycream;
+    void Start()
+    {
+        Vector3 rot = transform.localRotation.eulerAngles;
+        rotY = rot.y;
+        rotX = rot.x;
+    }
 
-        public void Update()
+    void Update()
+    {
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = -Input.GetAxis("Mouse Y");
 
-        {
+        rotY += mouseX * mouseSensitivity * Time.deltaTime;
+        rotX += mouseY * mouseSensitivity * Time.deltaTime;
 
-            CreamView();
+        rotX = Mathf.Clamp(rotX, -clampAngle, clampAngle);
 
-        }
+        Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
+        transform.rotation = localRotation;
+    }
 
-        private void CreamView()
-
-        {
-
-            float x = Input.GetAxis("Mouse X");
-
-            float y = Input.GetAxis("Mouse Y");
-
-            if (x != 0 || y != 0)
-
-            {
-
-                LimitAngle(60);
-
-                LimitAngleUandD(60);
-
-                this.transform.Rotate(-y * speed, 0, 0);
-
-                this.transform.Rotate(0, x * speed, 0, Space.World);
-
-            }
-
-        }
-
-        ///
-
-        /// 限制相机左右视角的角度
-
-        ///
-
-        /// 角度
-
-        private void LimitAngle(float angle)
-
-        {
-
-            vect = this.transform.eulerAngles;
-
-            //当前相机x轴旋转的角度(0~360)
-
-            xcream = IsPosNum(vect.x);
-
-            if (xcream > angle)
-
-                this.transform.rotation = Quaternion.Euler(angle, vect.y, 0);
-
-            else if (xcream < -angle)
-
-                this.transform.rotation = Quaternion.Euler(-angle, vect.y, 0);
-
-        }
-
-        ///
-
-        /// 限制相机上下视角的角度
-
-        ///
-
-        ///
-
-        private void LimitAngleUandD(float angle)
-
-        {
-
-            vect = this.transform.eulerAngles;
-
-            //当前相机y轴旋转的角度(0~360)
-
-            ycream = IsPosNum(vect.y);
-
-            if (ycream > angle)
-
-                this.transform.rotation = Quaternion.Euler(vect.x, angle, 0);
-
-            else if (ycream < -angle)
-
-                this.transform.rotation = Quaternion.Euler(vect.x, -angle, 0);
-
-        }
-
-        ///
-
-        /// 将角度转换为-180~180的角度
-
-        ///
-
-        ///
-
-        ///
-
-        private float IsPosNum(float x)
-
-        {
-
-            x -= 180;
-
-            if (x < 0)
-
-                return x + 180;
-
-            else return x - 180;
-
-        }
-
-    
 
 }
