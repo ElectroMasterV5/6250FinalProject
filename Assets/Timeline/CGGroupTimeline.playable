@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: 
-  m_Clip: {fileID: 8300000, guid: 4d3fd82dee0791d4ab10179fe69fb97e, type: 3}
+  m_Clip: {fileID: 8300000, guid: 6ba7d907cba14934d9ab270a6447d038, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
@@ -1976,10 +1976,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 9.6
-    m_ClipIn: 1.232000000000001
+    m_Start: 10.15
+    m_ClipIn: 0
     m_Asset: {fileID: -7264301586427404449}
-    m_Duration: 4.050000000000001
+    m_Duration: 2.4239999999999995
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1924528833611286130}
     m_EaseInDuration: 0
