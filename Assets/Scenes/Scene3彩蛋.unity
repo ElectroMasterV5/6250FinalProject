@@ -36983,7 +36983,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646642461}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ed3799e3f657694c890bdb180d9831f, type: 3}
   m_Name: 
@@ -38147,6 +38147,7 @@ GameObject:
   - component: {fileID: 1705660449}
   - component: {fileID: 1705660448}
   - component: {fileID: 1705660447}
+  - component: {fileID: 1705660451}
   m_Layer: 0
   m_Name: Scrubs_Female (2)
   m_TagString: Untagged
@@ -38225,6 +38226,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 38.564, z: 0}
+--- !u!65 &1705660451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705660446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48300517, y: 1.8524835, z: 0.42513174}
+  m_Center: {x: -0.04499016, y: 0.81933546, z: -0.0071879807}
 --- !u!1001 &1709688886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45592,6 +45606,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5000784323287534887, guid: 8d8a601de38d51f4189676204f06a1b9, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4532b202ae0bdf94e912885b38dc737a, type: 2}
+    - target: {fileID: 5000784323287534887, guid: 8d8a601de38d51f4189676204f06a1b9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2593124042274149570, guid: 4532b202ae0bdf94e912885b38dc737a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d8a601de38d51f4189676204f06a1b9, type: 3}
 --- !u!224 &1984587665 stripped
@@ -51355,7 +51377,7 @@ GameObject:
   - component: {fileID: 518446610263238213}
   m_Layer: 0
   m_Name: P4
-  m_TagString: P4
+  m_TagString: T4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54842,7 +54864,7 @@ GameObject:
   - component: {fileID: 3153464357723531805}
   m_Layer: 0
   m_Name: P2
-  m_TagString: P2
+  m_TagString: T2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60994,7 +61016,7 @@ GameObject:
   - component: {fileID: 6177579605841725244}
   m_Layer: 0
   m_Name: P3
-  m_TagString: P3
+  m_TagString: T3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65733,7 +65755,7 @@ GameObject:
   - component: {fileID: 8233496652632482617}
   m_Layer: 0
   m_Name: P1
-  m_TagString: P1
+  m_TagString: T1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

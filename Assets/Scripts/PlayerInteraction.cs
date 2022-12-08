@@ -40,6 +40,7 @@ public class PlayerInteraction : MonoBehaviour
                 CommunicateChild(raycastHit);
                 CommunicateFChild(raycastHit);
                 PickPost(raycastHit);
+                CommunicateWithT(raycastHit);
             }
         }
 
@@ -99,7 +100,7 @@ public class PlayerInteraction : MonoBehaviour
         if (raycastHit.transform.CompareTag("P1"))
         {
 
-            SceneDia.text = "Thank you so much, Doctor Benboerba";
+            SceneDia.text = "Thank you so much, Doctor Bond";
             StartCoroutine(ClearDia(2f));
         }
         else if (raycastHit.transform.CompareTag("P2"))
@@ -118,6 +119,39 @@ public class PlayerInteraction : MonoBehaviour
         {
 
             SceneDia.text = "I don't even know how to thank you.";
+            StartCoroutine(ClearDia(2f));
+        }
+    }
+    private void CommunicateWithT(RaycastHit raycastHit)
+    {
+        if (raycastHit.transform.CompareTag("T1"))
+        {
+
+            SceneDia.text = "接着奏乐接着舞！";
+            StartCoroutine(ClearDia(2f));
+        }
+        else if (raycastHit.transform.CompareTag("T2"))
+        {
+
+            SceneDia.text = "来呀！快活呀!";
+            StartCoroutine(ClearDia(2f));
+        }
+        else if (raycastHit.transform.CompareTag("T3"))
+        {
+
+            SceneDia.text = "乌鸦坐飞机！";
+            StartCoroutine(ClearDia(2f));
+        }
+        else if (raycastHit.transform.CompareTag("T4"))
+        {
+
+            SceneDia.text = "你们不要再打了！";
+            StartCoroutine(ClearDia(2f));
+        }
+        else if (raycastHit.transform.CompareTag("T5"))
+        {
+
+            SceneDia.text = "欧巴Gangnam Style！";
             StartCoroutine(ClearDia(2f));
         }
     }
@@ -159,7 +193,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             case 0:
                 BGM.SetActive(true);
-                MimeDia.text = "\"Mr. Benboerba…\"";
+                MimeDia.text = "\"Mr. Bond…\"";
                 yield return new WaitForSeconds(3f);
                 MimeDia.text = "\"We tried our best...\"";
                 yield return new WaitForSeconds(3f);
@@ -250,7 +284,7 @@ public class PlayerInteraction : MonoBehaviour
                 yield return new WaitForSeconds(7f);
                 MimeDia.text = "Special Thanks: \n Chris Barney \n Rana Jahani \n &\n All the students in GSND6250";
                 yield return new WaitForSeconds(7f);
-                MimeDia.text = "Special Thanks: \n And \nYou";
+                MimeDia.text = "Special Thanks \nto \nYou";
                 yield return new WaitForSeconds(7f);
                 MimeDia.text = "Thank you for playing.";
                 yield return new WaitForSeconds(10f);
