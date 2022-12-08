@@ -267,6 +267,8 @@ public class PlayerInteraction : MonoBehaviour
                 yield return new WaitForSeconds(5f);
                 MimeDia.text = "不如我们这周六去唱K吧！";
                 yield return new WaitForSeconds(5f);
+                MimeDia.text = "这个学期已经结束啦！";
+                yield return new WaitForSeconds(5f);
                 MimeDia.text = "High起来！";
                 yield return new WaitForSeconds(5f);
                 MimeDia.text = "BTW，多谢游玩！！！！";
