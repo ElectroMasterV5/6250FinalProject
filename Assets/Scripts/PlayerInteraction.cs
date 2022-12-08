@@ -49,7 +49,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             
             SceneDia.text = "1111111111";
-            StartCoroutine(ClearDia(3f));
+            StartCoroutine(ClearDia(2f));
         }
     }
     private void CommunicateWithFatherInLaw(RaycastHit raycastHit)
@@ -58,7 +58,7 @@ public class PlayerInteraction : MonoBehaviour
         {
 
             SceneDia.text = "She came in half an hour ago. Take a seat.";
-            StartCoroutine(ClearDia(3f));
+            StartCoroutine(ClearDia(2f));
         }
     }
     private void CommunicateWithMotherInLaw(RaycastHit raycastHit)
@@ -67,7 +67,7 @@ public class PlayerInteraction : MonoBehaviour
         {
 
             SceneDia.text = "Oh..My girl.";
-            StartCoroutine(ClearDia(3f));
+            StartCoroutine(ClearDia(2f));
         }
     }
     private void CommunicateChild(RaycastHit raycastHit)
@@ -86,26 +86,26 @@ public class PlayerInteraction : MonoBehaviour
         if (raycastHit.transform.CompareTag("P1"))
         {
 
-            SceneDia.text = "P1";
-            StartCoroutine(ClearDia(3f));
+            SceneDia.text = "Thank you so much, Doctor Benboerba";
+            StartCoroutine(ClearDia(2f));
         }
         else if (raycastHit.transform.CompareTag("P2"))
         {
 
-            SceneDia.text = "P2";
-            StartCoroutine(ClearDia(3f));
+            SceneDia.text = "You saved her!";
+            StartCoroutine(ClearDia(2f));
         }
         else if (raycastHit.transform.CompareTag("P3"))
         {
 
-            SceneDia.text = "P3";
-            StartCoroutine(ClearDia(3f));
+            SceneDia.text = "Thanks a lot!";
+            StartCoroutine(ClearDia(2f));
         }
         else if (raycastHit.transform.CompareTag("P4"))
         {
 
-            SceneDia.text = "P4";
-            StartCoroutine(ClearDia(3f));
+            SceneDia.text = "I don't even know how to thank you.";
+            StartCoroutine(ClearDia(2f));
         }
     }
     private void SitOnChair(RaycastHit raycastHit)
@@ -163,15 +163,9 @@ public class PlayerInteraction : MonoBehaviour
                 SceneManager.LoadScene(CurrentScene);
                 break;
             case 2:
-                MimeDia.text = "9";
+                MimeDia.text = "Hey Kiddo, your mom is okay now.";
                 yield return new WaitForSeconds(2f);
-                MimeDia.text = "10";
-                yield return new WaitForSeconds(2f);
-                MimeDia.text = "11";
-                yield return new WaitForSeconds(2f);
-                MimeDia.text = "12";
-                yield return new WaitForSeconds(2f);
-                MimeDia.text = "Thank you for playing!";
+                MimeDia.text = "Don't worry.";
                 yield return new WaitForSeconds(2f);
                 Application.Quit();
                 CurrentScene++;
