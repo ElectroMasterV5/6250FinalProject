@@ -151,13 +151,13 @@ public class PlayerInteraction : MonoBehaviour
                
                 break;
             case 1:
-                MimeDia.text = "5";
+                MimeDia.text = "Your wife is in a very good condition.";
                 yield return new WaitForSeconds(2f);
-                MimeDia.text = "6";
+                MimeDia.text = "Congratulations!";
                 yield return new WaitForSeconds(2f);
-                MimeDia.text = "7";
+                MimeDia.text = "You got a cute twins.";
                 yield return new WaitForSeconds(2f);
-                MimeDia.text = "8";
+                MimeDia.text = "You are a father Now!";
                 yield return new WaitForSeconds(2f);
                 CurrentScene++;
                 SceneManager.LoadScene(CurrentScene);
