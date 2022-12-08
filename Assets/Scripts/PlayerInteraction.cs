@@ -260,9 +260,17 @@ public class PlayerInteraction : MonoBehaviour
             case 4:
                 //BGM.SetActive(true);
                 MimeDia.text = "Hey Boiiii, You mother just Boomshakalaka";
-                yield return new WaitForSeconds(3f);
-                MimeDia.text = "Why so serious?";
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(5f);
+                MimeDia.text = "Why so serious?( ´_ゝ｀)";
+                yield return new WaitForSeconds(5f);
+                MimeDia.text = "既然你已经发现了这个彩蛋（・ˍ・*）";
+                yield return new WaitForSeconds(5f);
+                MimeDia.text = "不如我们这周六去唱K吧！（′▽`〃）";
+                yield return new WaitForSeconds(5f);
+                MimeDia.text = "High起来！";
+                yield return new WaitForSeconds(5f);
+                MimeDia.text = "BTW，多谢游玩！！！！";
+                yield return new WaitForSeconds(5f);
                 Application.Quit();
                 CurrentScene++;
                 break;
