@@ -9412,7 +9412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &378596937
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41378,6 +41378,7 @@ MonoBehaviour:
   Player: {fileID: 1659871823}
   SitCam: {fileID: 767585673}
   MimeDia: {fileID: 1779668936}
+  BGM: {fileID: 378596936}
 --- !u!114 &1659871825
 MonoBehaviour:
   m_ObjectHideFlags: 0

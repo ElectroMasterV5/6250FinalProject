@@ -23,6 +23,6 @@ public class NurseController : MonoBehaviour
     }
     public void StartMimeInAnim()
     {
-        Player.GetComponent<PlayerInteraction>().StartMime(1);
+        Player.GetComponent<PlayerInteraction>().StartMime(2);
     }
 }

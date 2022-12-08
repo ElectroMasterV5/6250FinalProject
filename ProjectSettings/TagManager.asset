@@ -19,6 +19,8 @@ TagManager:
   - P3
   - P4
   - Child
+  - Post
+  - FakeChild
   layers:
   - Default
   - TransparentFX
