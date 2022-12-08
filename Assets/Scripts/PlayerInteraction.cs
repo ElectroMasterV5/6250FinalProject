@@ -144,8 +144,8 @@ public class PlayerInteraction : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 MimeDia.text = "Your wife didn’t make it…";
                 yield return new WaitForSeconds(2f);
-                //MimeDia.text = "4";
-                //yield return new WaitForSeconds(2f);
+                MimeDia.text = "15 years later";
+                yield return new WaitForSeconds(5f);
                 CurrentScene++;
                 SceneManager.LoadScene(CurrentScene);
                
@@ -159,6 +159,8 @@ public class PlayerInteraction : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 MimeDia.text = "You are a father Now!";
                 yield return new WaitForSeconds(2f);
+                MimeDia.text = "1 years later";
+                yield return new WaitForSeconds(5f);
                 CurrentScene++;
                 SceneManager.LoadScene(CurrentScene);
                 break;
