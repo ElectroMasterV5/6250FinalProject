@@ -48,7 +48,7 @@ public class PlayerInteraction : MonoBehaviour
         if (raycastHit.transform.CompareTag("Cry"))
         {
             
-            SceneDia.text = "1111111111";
+            SceneDia.text = "Your mom will be fine. I hope ...";
             StartCoroutine(ClearDia(2f));
         }
     }
