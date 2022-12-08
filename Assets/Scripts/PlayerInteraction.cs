@@ -164,7 +164,7 @@ public class PlayerInteraction : MonoBehaviour
                 MimeDia.text = "\"We tried our best...\"";
                 yield return new WaitForSeconds(3f);
                 MimeDia.text = "\"Your wife didn’t make it…\"";
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(5f);
                 MimeDia.text = "From that day, I lost my mom.";
                 yield return new WaitForSeconds(5f);
                 CurrentScene++;
@@ -240,9 +240,9 @@ public class PlayerInteraction : MonoBehaviour
                 yield return new WaitForSeconds(7f);
                 MimeDia.text = "Program: \n Jiayu Shi  石家毓\n Moling Chen  陈茉菱\n Qiqing Zhang  张棋清\n Yilun Wang  王轶伦";
                 yield return new WaitForSeconds(7f);
-                MimeDia.text = "Sketch: \n Jiayu Shi  石家毓\n Moling Chen  陈茉菱\n Rong Sheng  盛荣";
+                MimeDia.text = "Sketch: \n Jiaxiang Mu  穆嘉翔\n Jiayu Shi  石家毓\n Moling Chen  陈茉菱\n Rong Sheng  盛荣";
                 yield return new WaitForSeconds(7f);
-                MimeDia.text = "Document: \n Jiaxiang Mu  穆嘉翔\n Rong Sheng  盛荣";
+                MimeDia.text = "Document: \n Jiaxiang Mu  穆嘉翔\n Rong Sheng  盛荣\n Moling Chen  陈茉菱";
                 yield return new WaitForSeconds(7f);
                 MimeDia.text = "Copyright: \n Adobe Mixamo \n aigei 爱给网 \n freepd \n cgtrader \n ChinaZ 站长素材 \n Unity Assets Store";
                 yield return new WaitForSeconds(7f);
@@ -261,11 +261,11 @@ public class PlayerInteraction : MonoBehaviour
                 //BGM.SetActive(true);
                 MimeDia.text = "Hey Boiiii, You mother just Boomshakalaka";
                 yield return new WaitForSeconds(5f);
-                MimeDia.text = "Why so serious?( ´_ゝ｀)";
+                MimeDia.text = "Why so serious?";
                 yield return new WaitForSeconds(5f);
-                MimeDia.text = "既然你已经发现了这个彩蛋（・ˍ・*）";
+                MimeDia.text = "既然你已经发现了这个彩蛋";
                 yield return new WaitForSeconds(5f);
-                MimeDia.text = "不如我们这周六去唱K吧！（′▽`〃）";
+                MimeDia.text = "不如我们这周六去唱K吧！";
                 yield return new WaitForSeconds(5f);
                 MimeDia.text = "High起来！";
                 yield return new WaitForSeconds(5f);
