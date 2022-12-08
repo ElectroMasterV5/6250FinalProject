@@ -250,6 +250,8 @@ public class PlayerInteraction : MonoBehaviour
                 yield return new WaitForSeconds(7f);
                 MimeDia.text = "Special Thanks: \n Chris Barney \n Rana Jahani \n &\n All the students in GSND6250";
                 yield return new WaitForSeconds(7f);
+                MimeDia.text = "Special Thanks: \n And \nYou";
+                yield return new WaitForSeconds(7f);
                 MimeDia.text = "Thank you for playing.";
                 yield return new WaitForSeconds(10f);
                 Application.Quit();
