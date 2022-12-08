@@ -295,7 +295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u624B\u672F\u5B8C\u6210\nOperating Finished"
+  m_text: "\u624B\u672F\u7ED3\u675F\nOperating Finished"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 146dfee260a25f14d983da36df2aef01, type: 2}
   m_sharedMaterial: {fileID: -2593124042274149570, guid: 146dfee260a25f14d983da36df2aef01, type: 2}
